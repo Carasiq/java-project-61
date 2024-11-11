@@ -3,3 +3,6 @@ run-dist:
 
 clean:
 	./gradlew clean
+
+installDist:
+	./gradlew installDist
