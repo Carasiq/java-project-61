@@ -2,6 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -56,6 +57,9 @@ public class Engine {
         if (k == 3) {
             Calc.pointOfTheGame();
         }
+        if (k == 4) {
+            GCD.pointOfTheGame();
+        }
     }
     public static void varConditionOfTheGame(int k) {
         if (k == 2) {
@@ -63,6 +67,9 @@ public class Engine {
         }
         if (k == 3) {
             Calc.conditionOfTheGame();
+        }
+        if (k == 4) {
+            GCD.conditionOfTheGame();
         }
     }
 }

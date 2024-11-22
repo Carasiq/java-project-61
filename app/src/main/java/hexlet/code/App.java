@@ -11,22 +11,12 @@ class App {
                 1 - Greet
                 2 - Even
                 3 - Calc
+                4 - GCD
                 0 - Exit""");
         System.out.print("\nYour choice: ");
         gameNumber = scanner.nextInt();
-
-        if (gameNumber == 1) {
-            sayName();
-        }
-
-        if (gameNumber == 2) {
-            sayName();
-            Engine.parityCheck();
-        }
-        if (gameNumber == 3) {
-            sayName();
-            Engine.parityCheck();
-        }
+        sayName();
+        Engine.parityCheck();
     }
 
     public static void sayName() {
