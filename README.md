@@ -9,3 +9,6 @@ https://asciinema.org/a/KXAy1yFHU8ODipNiKd9kvC3B5
 
 ### Asciinema with an example of running the Calc game
 https://asciinema.org/a/htYR3wi8Vd4FSn360XzjbsVWP
+
+### Asciinema with an example of running the GCD game
+https://asciinema.org/a/OgSvj0tA6R0etmsosMgZxNC81
