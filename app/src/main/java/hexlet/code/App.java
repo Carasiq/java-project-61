@@ -12,6 +12,7 @@ class App {
                 2 - Even
                 3 - Calc
                 4 - GCD
+                5 - Progression
                 0 - Exit""");
         System.out.print("\nYour choice: ");
         gameNumber = scanner.nextInt();

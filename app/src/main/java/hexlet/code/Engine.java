@@ -3,6 +3,7 @@ package hexlet.code;
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -34,18 +35,16 @@ public class Engine {
             yourAnswer = scanner.nextLine();
             System.out.println("Your answer: " + yourAnswer);
 
-
-            if (i == 3) {
-                System.out.println("Congratulations, " + Engine.userName + " !");
-                break;
-            }
-
             if (yourAnswer.equals(trueAnswer)) {
                 System.out.println("Correct!");
             }
             if (!yourAnswer.equals(trueAnswer)) {
                 System.out.println("'" + yourAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" + trueAnswer + "'.");
                 System.out.println("Let's try again, " + Engine.userName + " !");
+                break;
+            }
+            if (i == 3) {
+                System.out.println("Congratulations, " + Engine.userName + " !");
                 break;
             }
         }
@@ -60,6 +59,9 @@ public class Engine {
         if (k == 4) {
             GCD.pointOfTheGame();
         }
+        if (k == 5) {
+            Progression.pointOfTheGame();
+        }
     }
     public static void varConditionOfTheGame(int k) {
         if (k == 2) {
@@ -70,6 +72,9 @@ public class Engine {
         }
         if (k == 4) {
             GCD.conditionOfTheGame();
+        }
+        if (k == 5) {
+            Progression.conditionOfTheGame();
         }
     }
 }
