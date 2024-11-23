@@ -15,3 +15,6 @@ https://asciinema.org/a/OgSvj0tA6R0etmsosMgZxNC81
 
 ### Asciinema with an example of running the Progression game
 https://asciinema.org/a/ZU9ugTccAZI4F9PsgbAJlYTYd
+
+### Asciinema with an example of running the Prime game
+https://asciinema.org/a/ZcmsgBD1IhuYlt4CoPa55wbD4
