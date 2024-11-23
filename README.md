@@ -12,3 +12,6 @@ https://asciinema.org/a/htYR3wi8Vd4FSn360XzjbsVWP
 
 ### Asciinema with an example of running the GCD game
 https://asciinema.org/a/OgSvj0tA6R0etmsosMgZxNC81
+
+### Asciinema with an example of running the Progression game
+https://asciinema.org/a/ZU9ugTccAZI4F9PsgbAJlYTYd
