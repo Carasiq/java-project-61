@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
+import hexlet.code.games.*;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -62,6 +59,9 @@ public class Engine {
         if (k == 5) {
             Progression.pointOfTheGame();
         }
+        if (k == 6) {
+            Prime.pointOfTheGame();
+        }
     }
     public static void varConditionOfTheGame(int k) {
         if (k == 2) {
@@ -75,6 +75,9 @@ public class Engine {
         }
         if (k == 5) {
             Progression.conditionOfTheGame();
+        }
+        if (k == 6) {
+            Prime.conditionOfTheGame();
         }
     }
 }

@@ -13,11 +13,17 @@ class App {
                 3 - Calc
                 4 - GCD
                 5 - Progression
+                6 - Prime
                 0 - Exit""");
         System.out.print("\nYour choice: ");
         gameNumber = scanner.nextInt();
-        sayName();
-        Engine.parityCheck();
+        if (gameNumber == 1) {
+            sayName();
+        }
+        else {
+            sayName();
+            Engine.parityCheck();
+        }
     }
 
     public static void sayName() {

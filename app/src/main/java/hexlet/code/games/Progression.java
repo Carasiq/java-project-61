@@ -10,9 +10,11 @@ public class Progression {
         int k = randomNumber();
         Engine.task = "";
         int result = 0;
+
         for (int i = 0; i <= 10; ++i) {
             result = result + Engine.randomNum1 + j;
             Engine.task = Engine.task + " " + result;
+
             if (i == k) {
                 result = result + Engine.randomNum1 + j;
                 Engine.trueAnswer = "" + result;
