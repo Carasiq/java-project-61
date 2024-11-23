@@ -42,11 +42,11 @@ public class Engine {
             if (!yourAnswer.equals(trueAnswer)) {
                 System.out.println("'" + yourAnswer + "'" + " is wrong answer ;(. "
                         + "Correct answer was " + "'" + trueAnswer + "'.");
-                System.out.println("Let's try again, " + Engine.userName + " !");
+                System.out.println("Let's try again, " + Engine.userName + "!");
                 break;
             }
             if (i == 3) {
-                System.out.println("Congratulations, " + Engine.userName + " !");
+                System.out.println("Congratulations, " + Engine.userName + "!");
                 break;
             }
         }
