@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Prime;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Even;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Calc;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -16,7 +20,7 @@ public class Engine {
 
     public static int randomNumber() {
         Random random = new Random();
-        return random.nextInt(1,30);
+        return random.nextInt(1, 30);
     }
 
     public static void parityCheck() {
@@ -36,7 +40,8 @@ public class Engine {
                 System.out.println("Correct!");
             }
             if (!yourAnswer.equals(trueAnswer)) {
-                System.out.println("'" + yourAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" + trueAnswer + "'.");
+                System.out.println("'" + yourAnswer + "'" + " is wrong answer ;(. "
+                        + "Correct answer was " + "'" + trueAnswer + "'.");
                 System.out.println("Let's try again, " + Engine.userName + " !");
                 break;
             }

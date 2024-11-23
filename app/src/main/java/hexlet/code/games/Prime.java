@@ -7,7 +7,7 @@ public class Prime {
 
         Engine.task = Integer.toString(Engine.randomNum1);
         Engine.trueAnswer = "yes";
-        if(Engine.randomNum1 <= 2) {
+        if (Engine.randomNum1 <= 2) {
             Engine.trueAnswer = "no";
         }
 

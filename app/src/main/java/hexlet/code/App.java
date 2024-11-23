@@ -19,8 +19,7 @@ class App {
         gameNumber = scanner.nextInt();
         if (gameNumber == 1) {
             sayName();
-        }
-        else {
+        } else {
             sayName();
             Engine.parityCheck();
         }
@@ -29,8 +28,7 @@ class App {
     public static void sayName() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
-                
-                Welcome to the Brain Games!
+                \nWelcome to the Brain Games!
                 Say I have your name?""");
         Engine.userName = scanner.next();
         System.out.println("Hello, " + Engine.userName + "!");
