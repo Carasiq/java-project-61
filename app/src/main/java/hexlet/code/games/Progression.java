@@ -22,6 +22,7 @@ public class Progression {
             }
 
         }
+        Engine.task = Engine.task.trim();
     }
 
     public static void conditionOfTheGame() {
