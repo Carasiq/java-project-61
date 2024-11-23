@@ -29,7 +29,7 @@ class App {
         Scanner scanner = new Scanner(System.in);
         System.out.println("""
                 \nWelcome to the Brain Games!
-                Say I have your name?""");
+                May I have your name?""");
         Engine.userName = scanner.next();
         System.out.println("Hello, " + Engine.userName + "!");
     }
