@@ -31,7 +31,7 @@ public class Calc {
     }
 
     public static int randomNumber() {
-        int upperBound = 4;
+        final int upperBound = 4;
         Random random = new Random();
         return random.nextInt(1, upperBound);
     }
