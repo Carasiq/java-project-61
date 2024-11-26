@@ -6,17 +6,19 @@ import java.util.Random;
 
 public class Calc {
     public static void pointOfTheGame() {
-        if (Engine.randomNum3 == 1) {
-            Engine.trueAnswer = Integer.toString(Engine.randomNum1 + Engine.randomNum2);
-            Engine.task = Engine.randomNum1 + " + " + Engine.randomNum2;
-        }
-        if (Engine.randomNum3 == 2) {
-            Engine.trueAnswer = Integer.toString(Engine.randomNum1 - Engine.randomNum2);
-            Engine.task = Engine.randomNum1 + " - " + Engine.randomNum2;
-        }
-        if (Engine.randomNum3 == 3) {
-            Engine.trueAnswer = Integer.toString(Engine.randomNum1 * Engine.randomNum2);
-            Engine.task = Engine.randomNum1 + " * " + Engine.randomNum2;
+        switch (Engine.getRandomNum3()) {
+            case (1):
+                Engine.setTrueAnswer(Integer.toString(Engine.getRandomNum1() + Engine.getRandomNum2()));
+                Engine.setTask(Engine.getRandomNum1() + " + " + Engine.getRandomNum2());
+                break;
+            case (2):
+                Engine.setTrueAnswer(Integer.toString(Engine.getRandomNum1() - Engine.getRandomNum2()));
+                Engine.setTask(Engine.getRandomNum1() + " - " + Engine.getRandomNum2());
+                break;
+            case (3):
+                Engine.setTrueAnswer(Integer.toString(Engine.getRandomNum1() * Engine.getRandomNum2()));
+                Engine.setTask(Engine.getRandomNum1() + " * " + Engine.getRandomNum2());
+                break;
         }
     }
 
@@ -25,9 +27,8 @@ public class Calc {
     }
 
     public static int randomNumber() {
+        int upperBound = 4;
         Random random = new Random();
-        return random.nextInt(1, 4);
+        return random.nextInt(1, upperBound);
     }
-
 }
-

@@ -6,31 +6,34 @@ import java.util.Random;
 
 public class Progression {
     public static void pointOfTheGame() {
-        int j = randomNumber();
-        int k = randomNumber();
-        Engine.task = "";
+        int step = randomNumber();
+        int selectionOfNumber = randomNumber();
+        Engine.setTask("");
         int result = 0;
+        int lengthOfProgression = 10;
 
-        for (int i = 0; i <= 10; ++i) {
-            result = result + Engine.randomNum1 + j;
-            Engine.task = Engine.task + " " + result;
+        for (int i = 0; i <= lengthOfProgression; ++i) {
+            result = result + Engine.getRandomNum1() + step;
+            Engine.setTask(Engine.getTask() + " " + result);
 
-            if (i == k) {
-                result = result + Engine.randomNum1 + j;
-                Engine.trueAnswer = "" + result;
-                Engine.task = Engine.task + " ..";
+            if (i == selectionOfNumber) {
+                result = result + Engine.getRandomNum1() + step;
+                Engine.setTrueAnswer("" + result);
+                Engine.setTask(Engine.getTask() + " ..");
             }
 
         }
-        Engine.task = Engine.task.trim();
+        Engine.setTask(Engine.getTask().trim());
     }
 
     public static void conditionOfTheGame() {
         System.out.println("What number is missing in the progression?");
     }
 
+
     public static int randomNumber() {
+        int upperBound = 10;
         Random random = new Random();
-        return random.nextInt(1, 10);
+        return random.nextInt(1, upperBound);
     }
 }

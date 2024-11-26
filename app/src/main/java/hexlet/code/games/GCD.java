@@ -4,14 +4,14 @@ import hexlet.code.Engine;
 
 public class GCD {
     public static void pointOfTheGame() {
-        Engine.task = Engine.randomNum1 + " " + Engine.randomNum2;
+        Engine.setTask(Engine.getRandomNum1() + " " + Engine.getRandomNum2());
 
-        while (Engine.randomNum2 != 0) {
-            int tmp = Engine.randomNum1 % Engine.randomNum2;
-            Engine.randomNum1 = Engine.randomNum2;
-            Engine.randomNum2 = tmp;
+        while (Engine.getRandomNum2() != 0) {
+            int tmp = Engine.getRandomNum1() % Engine.getRandomNum2();
+            Engine.setRandomNum1(Engine.getRandomNum2());
+            Engine.setRandomNum2(tmp);
         }
-        Engine.trueAnswer = "" + Engine.randomNum1;
+        Engine.setTrueAnswer("" + Engine.getRandomNum1());
     }
 
     public static void conditionOfTheGame() {

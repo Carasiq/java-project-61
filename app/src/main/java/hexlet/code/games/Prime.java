@@ -5,15 +5,15 @@ import hexlet.code.Engine;
 public class Prime {
     public static void pointOfTheGame() {
 
-        Engine.task = Integer.toString(Engine.randomNum1);
-        Engine.trueAnswer = "yes";
-        if (Engine.randomNum1 <= 2) {
-            Engine.trueAnswer = "no";
+        Engine.setTask(Integer.toString(Engine.getRandomNum1()));
+        Engine.setTrueAnswer("yes");
+        if (Engine.getRandomNum1() <= 2) {
+            Engine.setTrueAnswer("no");
         }
 
-        for (int i = 2; i <= Engine.randomNum1 / 2; i++) {
-            if (Engine.randomNum1 % i == 0) {
-                Engine.trueAnswer = "no";
+        for (int i = 2; i <= Engine.getRandomNum1() / 2; i++) {
+            if (Engine.getRandomNum1() % i == 0) {
+                Engine.setTrueAnswer("no");
                 break;
             }
         }

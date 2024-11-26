@@ -5,13 +5,13 @@ import hexlet.code.Engine;
 public class Even {
 
     public static void pointOfTheGame() {
-        if (Engine.randomNum1 % 2 != 0) {
-            Engine.trueAnswer = "no";
+        if (Engine.getRandomNum1() % 2 != 0) {
+            Engine.setTrueAnswer("no");
         }
-        if (Engine.randomNum1 % 2 == 0) {
-            Engine.trueAnswer = "yes";
+        if (Engine.getRandomNum1() % 2 == 0) {
+            Engine.setTrueAnswer("yes");
         }
-        Engine.task = Integer.toString(Engine.randomNum1);
+        Engine.setTask(Integer.toString(Engine.getRandomNum1()));
     }
 
     public static void conditionOfTheGame() {
