@@ -6,19 +6,23 @@ import java.util.Random;
 
 public class Calc {
     public static void pointOfTheGame() {
+        final int actionWithAPlus = 1;
+        final int actionWithAMinus = 2;
+        final int actionWithAMultiplication = 3;
         switch (Engine.getRandomNum3()) {
-            case (1):
+            case (actionWithAPlus):
                 Engine.setTrueAnswer(Integer.toString(Engine.getRandomNum1() + Engine.getRandomNum2()));
                 Engine.setTask(Engine.getRandomNum1() + " + " + Engine.getRandomNum2());
                 break;
-            case (2):
+            case (actionWithAMinus):
                 Engine.setTrueAnswer(Integer.toString(Engine.getRandomNum1() - Engine.getRandomNum2()));
                 Engine.setTask(Engine.getRandomNum1() + " - " + Engine.getRandomNum2());
                 break;
-            case (3):
+            case (actionWithAMultiplication):
                 Engine.setTrueAnswer(Integer.toString(Engine.getRandomNum1() * Engine.getRandomNum2()));
                 Engine.setTask(Engine.getRandomNum1() + " * " + Engine.getRandomNum2());
                 break;
+            default:
         }
     }
 

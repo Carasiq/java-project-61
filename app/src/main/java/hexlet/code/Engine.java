@@ -26,20 +26,20 @@ public class Engine {
         return userName;
     }
 
-    public static void setTrueAnswer(String trueAnswer) {
-        Engine.trueAnswer = trueAnswer;
+    public static void setTrueAnswer(String pTrueAnswer) {
+        Engine.trueAnswer = pTrueAnswer;
     }
 
-    public static void setRandomNum1(int randomNum1) {
-        Engine.randomNum1 = randomNum1;
+    public static void setRandomNum1(int pRandomNum1) {
+        Engine.randomNum1 = pRandomNum1;
     }
 
     public static int getRandomNum1() {
         return randomNum1;
     }
 
-    public static void setRandomNum2(int randomNum2) {
-        Engine.randomNum2 = randomNum2;
+    public static void setRandomNum2(int pRandomNum2) {
+        Engine.randomNum2 = pRandomNum2;
     }
 
     public static int getRandomNum2() {
@@ -50,8 +50,8 @@ public class Engine {
         return randomNum3;
     }
 
-    public static void setTask(String task) {
-        Engine.task = task;
+    public static void setTask(String pTask) {
+        Engine.task = pTask;
     }
 
     public static String getTask() {
