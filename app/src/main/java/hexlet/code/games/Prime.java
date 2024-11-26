@@ -7,7 +7,7 @@ public class Prime {
 
         Engine.setTask(Integer.toString(Engine.getRandomNum1()));
         Engine.setTrueAnswer("yes");
-        if (Engine.getRandomNum1() <= 2) {
+        if (Engine.getRandomNum1() < 2) {
             Engine.setTrueAnswer("no");
         }
 
