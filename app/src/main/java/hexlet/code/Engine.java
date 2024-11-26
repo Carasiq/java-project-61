@@ -26,60 +26,32 @@ public class Engine {
         return userName;
     }
 
-<<<<<<< HEAD
-    public static void setYourAnswer(String pYourAnswer) {
-        Engine.yourAnswer = pYourAnswer;
-    }
-
-    public static String getYourAnswer() {
-        return yourAnswer;
-    }
-
-    public static void setTrueAnswer(String pTrueAnswer) {
-        Engine.trueAnswer = pTrueAnswer;
-    }
-
-    public static String getTrueAnswer() {
-        return trueAnswer;
-    }
-
-    public static void setRandomNum1(int pRandomNum1) {
-        Engine.randomNum1 = pRandomNum1;
-=======
     public static void setTrueAnswer(String trueAnswer) {
         Engine.trueAnswer = trueAnswer;
     }
 
     public static void setRandomNum1(int randomNum1) {
         Engine.randomNum1 = randomNum1;
->>>>>>> 5430eba (update games)
     }
 
     public static int getRandomNum1() {
         return randomNum1;
     }
 
-    public static void setRandomNum2(int pRandomNum2) {
-        Engine.randomNum2 = pRandomNum2;
+    public static void setRandomNum2(int randomNum2) {
+        Engine.randomNum2 = randomNum2;
     }
 
     public static int getRandomNum2() {
         return randomNum2;
     }
 
-<<<<<<< HEAD
-    public static void setRandomNum3(int pRandomNum3) {
-        Engine.randomNum3 = pRandomNum3;
-    }
-
-=======
->>>>>>> 5430eba (update games)
     public static int getRandomNum3() {
         return randomNum3;
     }
 
-    public static void setTask(String pTask) {
-        Engine.task = pTask;
+    public static void setTask(String task) {
+        Engine.task = task;
     }
 
     public static String getTask() {
