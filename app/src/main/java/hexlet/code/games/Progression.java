@@ -10,7 +10,7 @@ public class Progression {
         int selectionOfNumber = randomNumber();
         Engine.setTask("");
         int result = 0;
-        int lengthOfProgression = 10;
+        final int lengthOfProgression = 10;
 
         for (int i = 0; i <= lengthOfProgression; ++i) {
             result = result + Engine.getRandomNum1() + step;
@@ -32,7 +32,7 @@ public class Progression {
 
 
     public static int randomNumber() {
-        int upperBound = 10;
+        final int upperBound = 10;
         Random random = new Random();
         return random.nextInt(1, upperBound);
     }
