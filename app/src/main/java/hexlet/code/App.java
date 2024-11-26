@@ -4,9 +4,6 @@ import java.util.Scanner;
 class App {
     private static int gameNumber;
 
-    public static void setGameNumber(int gameNumber) {
-        App.gameNumber = gameNumber;
-    }
     public static int getGameNumber() {
         return gameNumber;
     }

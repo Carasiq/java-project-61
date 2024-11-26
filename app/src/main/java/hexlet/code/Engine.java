@@ -11,21 +11,22 @@ import java.util.Scanner;
 
 public class Engine {
     private static String userName;
-    private static String yourAnswer;
     private static String trueAnswer;
     private static int randomNum1;
     private static int randomNum2;
     private static int randomNum3;
     private static String task;
 
-    public static void setUserName(String userName) {
-        Engine.userName = userName;
+
+    public static void setUserName(String pUserName) {
+        Engine.userName = pUserName;
     }
 
     public static String getUserName() {
         return userName;
     }
 
+<<<<<<< HEAD
     public static void setYourAnswer(String pYourAnswer) {
         Engine.yourAnswer = pYourAnswer;
     }
@@ -44,6 +45,14 @@ public class Engine {
 
     public static void setRandomNum1(int pRandomNum1) {
         Engine.randomNum1 = pRandomNum1;
+=======
+    public static void setTrueAnswer(String trueAnswer) {
+        Engine.trueAnswer = trueAnswer;
+    }
+
+    public static void setRandomNum1(int randomNum1) {
+        Engine.randomNum1 = randomNum1;
+>>>>>>> 5430eba (update games)
     }
 
     public static int getRandomNum1() {
@@ -58,10 +67,13 @@ public class Engine {
         return randomNum2;
     }
 
+<<<<<<< HEAD
     public static void setRandomNum3(int pRandomNum3) {
         Engine.randomNum3 = pRandomNum3;
     }
 
+=======
+>>>>>>> 5430eba (update games)
     public static int getRandomNum3() {
         return randomNum3;
     }
@@ -75,15 +87,18 @@ public class Engine {
     }
 
     public static int randomNumber() {
+        final int upperBound = 10;
         Random random = new Random();
-        return random.nextInt(1, 30);
+        return random.nextInt(1, upperBound);
     }
 
     public static void logic() {
+        String yourAnswer;
         Scanner scanner = new Scanner(System.in);
         varConditionOfTheGame();
 
         for (int i = 1; true; ++i) {
+            final int numOfAttempts = 3;
             randomNum1 = randomNumber();
             randomNum2 = randomNumber();
             randomNum3 = Calc.randomNumber();
@@ -101,7 +116,7 @@ public class Engine {
                 System.out.println("Let's try again, " + Engine.userName + "!");
                 break;
             }
-            if (i == 3) {
+            if (i == numOfAttempts) {
                 System.out.println("Congratulations, " + Engine.userName + "!");
                 break;
             }
@@ -109,41 +124,55 @@ public class Engine {
     }
 
     public static void varPointOfTheGame() {
+       final int even = 2;
+        final int calc = 3;
+        final int gcd = 4;
+        final int progression = 5;
+        final int prime = 6;
+
         switch (App.getGameNumber()) {
-            case 2:
+            case even:
                 Even.pointOfTheGame();
                 break;
-            case 3:
+            case calc:
                 Calc.pointOfTheGame();
                 break;
-            case 4:
+            case gcd:
                 GCD.pointOfTheGame();
                 break;
-            case 5:
+            case progression:
                 Progression.pointOfTheGame();
                 break;
-            case 6:
+            case prime:
                 Prime.pointOfTheGame();
                 break;
+            default:
         }
     }
     public static void varConditionOfTheGame() {
+        final int even = 2;
+        final int calc = 3;
+        final int gcd = 4;
+        final int progression = 5;
+        final int prime = 6;
+
         switch (App.getGameNumber()) {
-            case 2:
+            case even:
                 Even.conditionOfTheGame();
                 break;
-            case 3:
+            case calc:
                 Calc.conditionOfTheGame();
                 break;
-            case 4:
+            case gcd:
                 GCD.conditionOfTheGame();
                 break;
-            case 5:
+            case progression:
                 Progression.conditionOfTheGame();
                 break;
-            case 6:
+            case prime:
                 Prime.conditionOfTheGame();
                 break;
+            default:
             }
         }
 
