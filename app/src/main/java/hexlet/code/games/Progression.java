@@ -34,6 +34,9 @@ public class Progression {
             convFindings[i][0] = "";
             for (int k = 0; k < 10; k++) {
                 convFindings[i][0] = convFindings[i][0] + " " + findings[i][k];
+                if (k == 0) {
+                    convFindings[i][0] = convFindings[i][0].trim();
+                }
             }
         }
         return convFindings;
