@@ -1,39 +1,41 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
-
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class Progression {
-    public static void pointOfTheGame() {
-        int step = randomNumber();
-        int selectionOfNumber = randomNumber();
-        Engine.setTask("");
-        int result = 0;
-        final int lengthOfProgression = 10;
 
-        for (int i = 0; i <= lengthOfProgression; ++i) {
-            result = result + Engine.getRandomNum1() + step;
-            Engine.setTask(Engine.getTask() + " " + result);
+    public static String conditionOfTheGame() {
+        return "What number is missing in the progression?";
+    }
 
-            if (i == selectionOfNumber) {
-                result = result + Engine.getRandomNum1() + step;
-                Engine.setTrueAnswer("" + result);
-                Engine.setTask(Engine.getTask() + " ..");
+    public static String[][] logic() {
+
+        String[][] findings = new String[3][11];
+        for (int i = 0; i < 3; i++) {
+            int initNum = Utils.randomNumber(10);
+            int randomPosNum = Utils.randomNumber(10);
+            int stepNum = Utils.randomNumber(8);
+            findings[i][0] = "";
+            for (int j = 0; j < 10; j++) {
+                findings[i][j] = "" + initNum * stepNum;
+                if (j == randomPosNum) {
+                    findings[i][10] = "" + initNum * stepNum;
+                    findings[i][j] = "..";
+                }
+                ++stepNum;
             }
+        } return conversion(findings);
+    }
 
+    public static String[][] conversion(String[][] findings) {
+        String[][] convFindings = new String[3][2];
+        for (int i = 0; i < 3; i++) {
+            convFindings[i][1] = findings[i][10];
+            convFindings[i][0] = "";
+            for (int k = 0; k < 10; k++) {
+                convFindings[i][0] = convFindings[i][0] + " " + findings[i][k];
+            }
         }
-        Engine.setTask(Engine.getTask().trim());
-    }
-
-    public static void conditionOfTheGame() {
-        System.out.println("What number is missing in the progression?");
-    }
-
-
-    public static int randomNumber() {
-        final int upperBound = 10;
-        Random random = new Random();
-        return random.nextInt(1, upperBound);
+        return convFindings;
     }
 }

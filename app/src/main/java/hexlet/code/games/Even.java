@@ -1,21 +1,27 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Even {
 
-    public static void pointOfTheGame() {
-        if (Engine.getRandomNum1() % 2 != 0) {
-            Engine.setTrueAnswer("no");
-        }
-        if (Engine.getRandomNum1() % 2 == 0) {
-            Engine.setTrueAnswer("yes");
-        }
-        Engine.setTask(Integer.toString(Engine.getRandomNum1()));
+    public static String conditionOfTheGame() {
+        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
 
-    public static void conditionOfTheGame() {
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+    public static String[][] logic() {
+        String[][] findings = new String[3][2];
+        for (int i = 0; i < 3; i++) {
+            findings[i][0] = "" + Utils.randomNumber(30);
+            findings[i][1] = comparison(findings[i][0]);
+        }
+        return findings;
+    }
+
+    public static String comparison(String question) {
+        if (Integer.parseInt(question) % 2 != 0) {
+            return "no";
+        }
+        else return "yes";
     }
 }
 
