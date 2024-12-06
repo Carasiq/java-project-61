@@ -21,7 +21,7 @@ public class Engine {
 
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. " +
-                        "Correct answer was '" + strings[1] + "'.\nLet's try again," + name + "!");
+                        "Correct answer was '" + strings[1] + "'.\nLet's try again, " + name + "!");
                 break;
             }
             if (i == 3) {
