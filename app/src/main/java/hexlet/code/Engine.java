@@ -25,7 +25,7 @@ public class Engine {
                 break;
             }
             if (i == 3) {
-                System.out.println("Congratulations," + name + "!");
+                System.out.println("Congratulations, " + name + "!");
             }
             ++i;
         }
