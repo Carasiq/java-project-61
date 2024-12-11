@@ -12,6 +12,7 @@ public class Engine {
         System.out.println("Hello, " + name + "!");
         System.out.println(conditionOfTheGame);
         int i = 1;
+        final int finalAttempt = 3;
         for (String[] strings : findings) {
             System.out.println("Question: " + strings[0] + "\nYour answer:");
             String answer = sc.next();
@@ -20,11 +21,11 @@ public class Engine {
                 System.out.println("Correct!");
 
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. " +
-                        "Correct answer was '" + strings[1] + "'.\nLet's try again, " + name + "!");
+                System.out.println("'" + answer + "' is wrong answer ;(. "
+                        + "Correct answer was '" + strings[1] + "'.\nLet's try again, " + name + "!");
                 break;
             }
-            if (i == 3) {
+            if (i == finalAttempt) {
                 System.out.println("Congratulations, " + name + "!");
             }
             ++i;

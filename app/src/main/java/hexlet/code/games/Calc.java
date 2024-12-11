@@ -10,23 +10,33 @@ public class Calc {
 
 
     public static String[][] logic() {
+        final int attempts = 3;
+        final int sizeOfArray = 4;
+        final int upperBound = 12;
 
-        String[][] findings = new String[3][4];
-        for (int i = 0; i < 3; i++) {
+        final int plus = 1;
+        final int minus = 2;
+        final int multiply = 3;
+        final int firstCount = 1;
+        final int secondCount = 2;
+        final int answer = 3;
+        final int numberOfOptions = 4;
+        String[][] findings = new String[attempts][sizeOfArray];
+        for (int i = 0; i < attempts; i++) {
 
-            int num = Utils.randomNumber(4);
-            if (num == 1) {
-                findings[i][0] = "+";
+            int num = Utils.randomNumber(numberOfOptions);
+            if (num == plus) {
+                findings[i][answer] = "+";
             }
-            if (num == 2) {
-                findings[i][0] = "-";
+            if (num == minus) {
+                findings[i][answer] = "-";
             }
-            if (num == 3) {
-                findings[i][0] = "*";
+            if (num == multiply) {
+                findings[i][answer] = "*";
             }
-            findings[i][1] = "" + Utils.randomNumber(12);
-            findings[i][2] = "" + Utils.randomNumber(12);
-            findings[i][3] = comparison(findings[i][0], findings[i][1], findings[i][2]);
+            findings[i][firstCount] = "" + Utils.randomNumber(upperBound);
+            findings[i][secondCount] = "" + Utils.randomNumber(upperBound);
+            findings[i][answer] = comparison(findings[i][answer], findings[i][firstCount], findings[i][secondCount]);
         }
         return conversion(findings);
     }
@@ -45,9 +55,12 @@ public class Calc {
     }
 
     public static String[][] conversion(String[][] findings) {
-        String[][] convFindings = new String[3][2];
-        for (int i = 0; i < 3; i++) {
-            convFindings[i][1] = findings[i][3];
+        final int attempts = 3;
+        final int answer = 3;
+
+        String[][] convFindings = new String[attempts][2];
+        for (int i = 0; i < attempts; i++) {
+            convFindings[i][1] = findings[i][answer];
             convFindings[i][0] = findings [i][1] + " " + findings[i][0] + " " + findings[i][2];
         }
         return convFindings;

@@ -9,9 +9,11 @@ public class Even {
     }
 
     public static String[][] logic() {
-        String[][] findings = new String[3][2];
-        for (int i = 0; i < 3; i++) {
-            findings[i][0] = "" + Utils.randomNumber(30);
+        final int attempts = 3;
+        final int upperBound = 30;
+        String[][] findings = new String[attempts][2];
+        for (int i = 0; i < attempts; i++) {
+            findings[i][0] = "" + Utils.randomNumber(upperBound);
             findings[i][1] = comparison(findings[i][0]);
         }
         return findings;
@@ -21,7 +23,7 @@ public class Even {
         if (Integer.parseInt(question) % 2 != 0) {
             return "no";
         }
-        else return "yes";
+        return "yes";
     }
 }
 

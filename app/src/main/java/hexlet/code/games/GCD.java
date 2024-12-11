@@ -11,9 +11,11 @@ public class GCD {
     public static String[][] logic() {
 
         String[][] findings = new String[3][3];
-        for (int i = 0; i < 3; i++) {
-            findings[i][0] = "" + Utils.randomNumber(30);
-            findings[i][1] = "" + Utils.randomNumber(30);
+        final int attempts = 3;
+        final int upperBound = 30;
+        for (int i = 0; i < attempts; i++) {
+            findings[i][0] = "" + Utils.randomNumber(upperBound);
+            findings[i][1] = "" + Utils.randomNumber(upperBound);
             findings[i][2] = comparison(findings[i][0], findings[i][1]);
         }
         return conversion(findings);
@@ -32,10 +34,11 @@ public class GCD {
     }
 
     public static String[][] conversion(String[][] findings) {
-        String[][] convFindings = new String[3][2];
-        for (int i = 0; i < 3; i++) {
+        final int attempts = 3;
+        String[][] convFindings = new String[attempts][2];
+        for (int i = 0; i < attempts; i++) {
             convFindings[i][1] = findings[i][2];
-            convFindings[i][0] = findings [i][0] + " " + findings[i][1];
+            convFindings[i][0] = findings[i][0] + " " + findings[i][1];
         }
         return convFindings;
     }

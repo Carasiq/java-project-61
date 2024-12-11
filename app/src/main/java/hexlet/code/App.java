@@ -1,5 +1,9 @@
 package hexlet.code;
-import hexlet.code.games.*;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
@@ -18,23 +22,29 @@ class App {
                 0 - Exit""");
         System.out.print("\nYour choice: ");
         int gameNumber = scanner.nextInt();
+        final int greet = 1;
+        final int even = 2;
+        final int calc = 3;
+        final int gcd = 4;
+        final int progression = 5;
+        final int prime = 6;
         switch (gameNumber) {
-            case 1:
+            case greet:
                 sayName();
                 break;
-            case 2:
+            case even:
                 Engine.logic(Even.logic(), Even.conditionOfTheGame());
                 break;
-            case 3:
+            case calc:
                 Engine.logic(Calc.logic(), Calc.conditionOfTheGame());
                 break;
-            case 4:
+            case gcd:
                 Engine.logic(GCD.logic(), GCD.conditionOfTheGame());
                 break;
-            case 5:
+            case progression:
                 Engine.logic(Progression.logic(), Progression.conditionOfTheGame());
                 break;
-            case 6:
+            case prime:
                 Engine.logic(Prime.logic(), Prime.conditionOfTheGame());
                 break;
             default:

@@ -9,10 +9,12 @@ public class Prime {
     }
 
     public static String[][] logic() {
-        String[][] findings = new String[3][2];
-        for (int i = 0; i < 3; i++) {
+        final int attempts = 3;
+        final int upperBound = 30;
+        String[][] findings = new String[attempts][2];
+        for (int i = 0; i < attempts; i++) {
             for (int j = 0; j < 2; j++) {
-                findings[i][0] = "" + Utils.randomNumber(30);
+                findings[i][0] = "" + Utils.randomNumber(upperBound);
                 findings[i][1] = comparison(findings[i][0]);
             }
         } return findings;
