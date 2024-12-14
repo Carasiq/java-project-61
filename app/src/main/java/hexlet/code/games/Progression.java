@@ -3,18 +3,18 @@ package hexlet.code.games;
 import hexlet.code.Utils;
 
 public class Progression {
+    private static final int attempts = 3;
+    private static final int quantity = 10;
+    private static final int upperBoundOfInitNum = 10;
+    private static final int upperBoundOfRandomPosNum = 10;
+    private static final int upperBoundOfStepNum = 8;
+    private static final int sizeOfArray = 11;
 
     public static String conditionOfTheGame() {
         return "What number is missing in the progression?";
     }
-
     public static String[][] logic() {
-        final int attempts = 3;
-        final int quantity = 10;
-        final int upperBoundOfInitNum = 10;
-        final int upperBoundOfRandomPosNum = 10;
-        final int upperBoundOfStepNum = 8;
-        String[][] findings = new String[attempts][11];
+        String[][] findings = new String[attempts][sizeOfArray];
 
         for (int i = 0; i < attempts; i++) {
             int initNum = Utils.randomNumber(upperBoundOfInitNum);
@@ -33,8 +33,7 @@ public class Progression {
     }
 
     public static String[][] conversion(String[][] findings) {
-        final int attempts = 3;
-        final int quantity = 10;
+
         String[][] convFindings = new String[attempts][2];
         for (int i = 0; i < attempts; i++) {
             convFindings[i][1] = findings[i][quantity];

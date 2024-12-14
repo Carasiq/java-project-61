@@ -3,20 +3,22 @@ package hexlet.code.games;
 import hexlet.code.Utils;
 
 public class Prime {
+    private static final int attempts = 3;
+    private static final int upperBound = 30;
+    private static final int question = 0;
+    private static final int answer = 1;
+    private static final int sizeOfArray = 2;
 
     public static String conditionOfTheGame() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
     public static String[][] logic() {
-        final int attempts = 3;
-        final int upperBound = 30;
-        String[][] findings = new String[attempts][2];
+        String[][] findings = new String[attempts][sizeOfArray];
         for (int i = 0; i < attempts; i++) {
-            for (int j = 0; j < 2; j++) {
-                findings[i][0] = "" + Utils.randomNumber(upperBound);
-                findings[i][1] = comparison(findings[i][0]);
-            }
+            findings[i][question] = "" + Utils.randomNumber(upperBound);
+            findings[i][answer] = comparison(findings[i][question]);
+
         } return findings;
     }
 

@@ -4,39 +4,41 @@ import hexlet.code.Utils;
 
 public class Calc {
 
+    private static final int attempts = 3;
+    private static final int sizeOfArray = 4;
+    private static final int upperBound = 12;
+    private static final int plus = 1;
+    private static final int minus = 2;
+    private static final int multiply = 3;
+    private static final int firstNumber = 1;
+    private static final int secondNumber = 2;
+    private static final int answer = 3;
+    private static final int numberOfOptions = 4;
+    private static final int mathSign = 0;
+
     public static String conditionOfTheGame() {
         return "What is the result of the expression?";
     }
 
 
     public static String[][] logic() {
-        final int attempts = 3;
-        final int sizeOfArray = 4;
-        final int upperBound = 12;
 
-        final int plus = 1;
-        final int minus = 2;
-        final int multiply = 3;
-        final int firstCount = 1;
-        final int secondCount = 2;
-        final int answer = 3;
-        final int numberOfOptions = 4;
         String[][] findings = new String[attempts][sizeOfArray];
         for (int i = 0; i < attempts; i++) {
 
             int num = Utils.randomNumber(numberOfOptions);
             if (num == plus) {
-                findings[i][0] = "+";
+                findings[i][mathSign] = "+";
             }
             if (num == minus) {
-                findings[i][0] = "-";
+                findings[i][mathSign] = "-";
             }
             if (num == multiply) {
-                findings[i][0] = "*";
+                findings[i][mathSign] = "*";
             }
-            findings[i][firstCount] = "" + Utils.randomNumber(upperBound);
-            findings[i][secondCount] = "" + Utils.randomNumber(upperBound);
-            findings[i][answer] = comparison(findings[i][0], findings[i][firstCount], findings[i][secondCount]);
+            findings[i][firstNumber] = "" + Utils.randomNumber(upperBound);
+            findings[i][secondNumber] = "" + Utils.randomNumber(upperBound);
+            findings[i][answer] = comparison(findings[i][mathSign], findings[i][firstNumber], findings[i][secondNumber]);
         }
         return conversion(findings);
     }
@@ -55,13 +57,10 @@ public class Calc {
     }
 
     public static String[][] conversion(String[][] findings) {
-        final int attempts = 3;
-        final int answer = 3;
-
         String[][] convFindings = new String[attempts][2];
         for (int i = 0; i < attempts; i++) {
             convFindings[i][1] = findings[i][answer];
-            convFindings[i][0] = findings [i][1] + " " + findings[i][0] + " " + findings[i][2];
+            convFindings[i][0] = findings [i][firstNumber] + " " + findings[i][mathSign] + " " + findings[i][secondNumber];
         }
         return convFindings;
     }
