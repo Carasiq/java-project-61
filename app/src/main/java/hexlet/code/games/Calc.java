@@ -4,17 +4,17 @@ import hexlet.code.Utils;
 
 public class Calc {
 
-    private static final int attempts = 3;
-    private static final int sizeOfArray = 4;
-    private static final int upperBound = 12;
-    private static final int plus = 1;
-    private static final int minus = 2;
-    private static final int multiply = 3;
-    private static final int firstNumber = 1;
-    private static final int secondNumber = 2;
-    private static final int answer = 3;
-    private static final int numberOfOptions = 4;
-    private static final int mathSign = 0;
+    private static final int ATTEMPTS = 3;
+    private static final int SIZE_OF_ARRAY = 4;
+    private static final int UPPER_BOUND = 12;
+    private static final int PLUS = 1;
+    private static final int MINUS = 2;
+    private static final int MULTIPLY = 3;
+    private static final int FIRST_NUM = 1;
+    private static final int SECOND_NUM = 2;
+    private static final int ANSWER = 3;
+    private static final int NUM_OF_OPTIONS = 4;
+    private static final int MATH_SIGN = 0;
 
     public static String conditionOfTheGame() {
         return "What is the result of the expression?";
@@ -23,22 +23,22 @@ public class Calc {
 
     public static String[][] logic() {
 
-        String[][] findings = new String[attempts][sizeOfArray];
-        for (int i = 0; i < attempts; i++) {
+        String[][] findings = new String[ATTEMPTS][SIZE_OF_ARRAY];
+        for (int i = 0; i < ATTEMPTS; i++) {
 
-            int num = Utils.randomNumber(numberOfOptions);
-            if (num == plus) {
-                findings[i][mathSign] = "+";
+            int num = Utils.randomNumber(NUM_OF_OPTIONS);
+            if (num == PLUS) {
+                findings[i][MATH_SIGN] = "+";
             }
-            if (num == minus) {
-                findings[i][mathSign] = "-";
+            if (num == MINUS) {
+                findings[i][MATH_SIGN] = "-";
             }
-            if (num == multiply) {
-                findings[i][mathSign] = "*";
+            if (num == MULTIPLY) {
+                findings[i][MATH_SIGN] = "*";
             }
-            findings[i][firstNumber] = "" + Utils.randomNumber(upperBound);
-            findings[i][secondNumber] = "" + Utils.randomNumber(upperBound);
-            findings[i][answer] = comparison(findings[i][mathSign], findings[i][firstNumber], findings[i][secondNumber]);
+            findings[i][FIRST_NUM] = "" + Utils.randomNumber(UPPER_BOUND);
+            findings[i][SECOND_NUM] = "" + Utils.randomNumber(UPPER_BOUND);
+            findings[i][ANSWER] = comparison(findings[i][MATH_SIGN], findings[i][FIRST_NUM], findings[i][SECOND_NUM]);
         }
         return conversion(findings);
     }
@@ -57,10 +57,10 @@ public class Calc {
     }
 
     public static String[][] conversion(String[][] findings) {
-        String[][] convFindings = new String[attempts][2];
-        for (int i = 0; i < attempts; i++) {
-            convFindings[i][1] = findings[i][answer];
-            convFindings[i][0] = findings [i][firstNumber] + " " + findings[i][mathSign] + " " + findings[i][secondNumber];
+        String[][] convFindings = new String[ATTEMPTS][2];
+        for (int i = 0; i < ATTEMPTS; i++) {
+            convFindings[i][1] = findings[i][ANSWER];
+            convFindings[i][0] = findings [i][FIRST_NUM] + " " + findings[i][MATH_SIGN] + " " + findings[i][SECOND_NUM];
         }
         return convFindings;
     }
