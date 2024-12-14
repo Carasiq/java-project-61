@@ -26,17 +26,17 @@ public class Calc {
 
             int num = Utils.randomNumber(numberOfOptions);
             if (num == plus) {
-                findings[i][answer] = "+";
+                findings[i][0] = "+";
             }
             if (num == minus) {
-                findings[i][answer] = "-";
+                findings[i][0] = "-";
             }
             if (num == multiply) {
-                findings[i][answer] = "*";
+                findings[i][0] = "*";
             }
             findings[i][firstCount] = "" + Utils.randomNumber(upperBound);
             findings[i][secondCount] = "" + Utils.randomNumber(upperBound);
-            findings[i][answer] = comparison(findings[i][answer], findings[i][firstCount], findings[i][secondCount]);
+            findings[i][answer] = comparison(findings[i][0], findings[i][firstCount], findings[i][secondCount]);
         }
         return conversion(findings);
     }
