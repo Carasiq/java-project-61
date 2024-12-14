@@ -3,7 +3,11 @@ package hexlet.code.games;
 import hexlet.code.Utils;
 
 public class Prime {
-
+    private static final int ATTEMPTS = 3;
+    private static final int UPPER_BOUND = 30;
+    private static final int QUESTION = 0;
+    private static final int ANSWER = 1;
+    private static final int SIZE_OF_ARRAY = 2;
 
     public static String conditionOfTheGame() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
