@@ -53,14 +53,14 @@ public class Calc {
         if (mathSign.equals("-")) {
             return Integer.toString(intFirstQuestion - intSecondQuestion);
         }
-        else return Integer.toString(intFirstQuestion * intSecondQuestion);
+        return Integer.toString(intFirstQuestion * intSecondQuestion);
     }
 
     public static String[][] conversion(String[][] findings) {
         String[][] convFindings = new String[ATTEMPTS][2];
         for (int i = 0; i < ATTEMPTS; i++) {
             convFindings[i][1] = findings[i][ANSWER];
-            convFindings[i][0] = findings [i][FIRST_NUM] + " " + findings[i][MATH_SIGN] + " " + findings[i][SECOND_NUM];
+            convFindings[i][0] = findings[i][FIRST_NUM] + " " + findings[i][MATH_SIGN] + " " + findings[i][SECOND_NUM];
         }
         return convFindings;
     }
